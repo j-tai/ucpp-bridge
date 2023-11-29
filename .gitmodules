@@ -1,0 +1,3 @@
+[submodule "uCPP"]
+	path = uCPP
+	url = https://github.com/pabuhr/uCPP.git
