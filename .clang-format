@@ -1,0 +1,20 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+---
+BasedOnStyle: LLVM
+IndentWidth: 4
+
+---
+Language: Cpp
+
+AllowShortIfStatementsOnASingleLine: WithoutElse
+BinPackArguments: true
+BinPackParameters: true
+DerivePointerAlignment: false
+IndentPPDirectives: BeforeHash
+PointerAlignment: Left
+TabWidth: 4
+UseTab: ForIndentation
+
+AttributeMacros: [_Mutex, _Nomutex]
+IfMacros: [Case]

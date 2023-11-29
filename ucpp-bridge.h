@@ -2,11 +2,11 @@
 #define UCPP_BRIDGE_H_
 
 // Helpers
-class __ucpp_bridge_empty_class {};
+class __empty {};
 
 // uC++ keywords
 #define _Accept if
-#define _At +
+#define _At ,
 #define _CatchResume catch
 #define _Cormonitor class
 #define _Coroutine class
@@ -14,7 +14,7 @@ class __ucpp_bridge_empty_class {};
 #define _Else else
 #define _Enable if (true)
 #define _Event class
-#define _Finally catch (__ucpp_bridge_empty_class&)
+#define _Finally catch (const __empty&)
 #define _Monitor class
 #define _Mutex
 #define _Nomutex
