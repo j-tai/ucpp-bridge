@@ -4,13 +4,8 @@
 // Helpers
 class __empty {};
 
-class __accept {};
-template <typename T> __accept operator||(const __accept&, const T&) {
-	return __accept{};
-}
-
 // uC++ keywords
-#define _Accept(expr) (__accept{} || expr)
+#define _Accept(expr) if (true)
 #define _At ,
 #define _CatchResume catch
 #define _Cormonitor class
