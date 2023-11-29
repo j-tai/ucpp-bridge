@@ -19,7 +19,7 @@ UseTab: ForIndentation
 AttributeMacros: [_Mutex, _Nomutex]
 IfMacros: [Case]
 Macros:
-  - _Accept=if
+  - _Accept(expr)=((void)0)
   - _At=,
   - _CatchResume=catch
   - _Cormonitor=class
