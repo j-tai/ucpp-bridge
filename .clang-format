@@ -18,3 +18,23 @@ UseTab: ForIndentation
 
 AttributeMacros: [_Mutex, _Nomutex]
 IfMacros: [Case]
+Macros:
+  - _Accept=if
+  - _At=,
+  - _CatchResume=catch
+  - _Cormonitor=class
+  - _Coroutine=class
+  - _Disable=if (true)
+  - _Else=else
+  - _Enable=if (true)
+  - _Event=class
+  - _Finally=catch (const __empty&)
+  - _Monitor=class
+  - _Mutex=
+  - _Nomutex=
+  - _Resume=throw
+  - _Task=class
+  - _Throw=throw
+  - _When(condition)=
+  - or=else
+  - and=else
