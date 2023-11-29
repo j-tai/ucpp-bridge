@@ -29,8 +29,10 @@ class __empty {};
 #define __U_MAXENTRYBITS__ 128
 
 // Include uC++ headers
+#define override // Remove the override specifier to avoid some errors
 #include "uCPP/source/src/kernel/uC++.h"
 #include "uCPP/source/src/library/fstream.h"
 #include "uCPP/source/src/library/ostream.h"
+#undef override
 
 #endif
