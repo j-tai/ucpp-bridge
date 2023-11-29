@@ -35,4 +35,14 @@ class __empty {};
 #include "uCPP/source/src/library/ostream.h"
 #undef override
 
+// These are member functions of uBaseTask, but the C++ compiler doesn't know
+// that '_Task' inherits from uBaseTask. Hence, the compiler cannot find
+// 'yield'. Add them here as global functions so they can be used inside a
+// _Task.
+void yield();
+void yield(size_t times);
+[[nodiscard]] size_t prng();
+[[nodiscard]] size_t prng(size_t upper);
+[[nodiscard]] size_t prng(size_t lower, size_t upper);
+
 #endif
