@@ -20,6 +20,7 @@ AttributeMacros: [_Mutex, _Nomutex]
 IfMacros: [Case]
 Macros:
   - _Accept(expr)=((void)0)
+  - _Actor=class
   - _At=,
   - _CatchResume=catch
   - _Cormonitor=class

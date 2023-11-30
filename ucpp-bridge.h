@@ -6,6 +6,7 @@ class __empty {};
 
 // uC++ keywords
 #define _Accept(expr) if (true)
+#define _Actor class
 #define _At ,
 #define _CatchResume catch
 #define _Cormonitor class
