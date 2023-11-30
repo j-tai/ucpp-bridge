@@ -1,49 +1,18 @@
-#ifndef UCPP_BRIDGE_H_
-#define UCPP_BRIDGE_H_
+#pragma once
 
-// Helpers
-class __empty {};
-
-// uC++ keywords
-#define _Accept(expr) if (true)
-#define _Actor class
-#define _At ,
-#define _CatchResume catch
-#define _Cormonitor class
-#define _Coroutine class
-#define _Disable if (true)
-#define _Else else
-#define _Enable if (true)
-#define _Event class
-#define _Finally catch (const __empty&)
-#define _Monitor class
-#define _Mutex
-#define _Nomutex
-#define _Resume throw
-#define _Task class
-#define _Throw throw
-#define _When(condition)
-#define or else
-#define and else
+#include "ucpp-keywords.h"
+#include "ucpp-polyfill.h"
 
 // Fill in uC++ internals
 #define __U_MAXENTRYBITS__ 128
 
-// Include uC++ headers
+// Main uC++ include
 #define override // Remove the override specifier to avoid some errors
 #include "uCPP/source/src/kernel/uC++.h"
+#undef override
+// osacquire, etc.
 #include "uCPP/source/src/library/fstream.h"
 #include "uCPP/source/src/library/ostream.h"
-#undef override
-
-// These are member functions of uBaseTask, but the C++ compiler doesn't know
-// that '_Task' inherits from uBaseTask. Hence, the compiler cannot find
-// 'yield'. Add them here as global functions so they can be used inside a
-// _Task.
-void yield();
-void yield(size_t times);
-[[nodiscard]] size_t prng();
-[[nodiscard]] size_t prng(size_t upper);
-[[nodiscard]] size_t prng(size_t lower, size_t upper);
-
-#endif
+// Global prng(); also acts as a polyfill since _Task classes contain a prng
+// member that C++ doesn't know about
+#include "uCPP/source/src/library/uPRNG.h"

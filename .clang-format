@@ -34,6 +34,7 @@ Macros:
   - _Mutex=
   - _Nomutex=
   - _Resume=throw
+  - _Select(expr)=((void)0)
   - _Task=class
   - _Throw=throw
   - _When(condition)=
