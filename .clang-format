@@ -31,8 +31,8 @@ Macros:
   - _Event=class
   - _Finally=catch (const __empty&)
   - _Monitor=class
-  - _Mutex=
-  - _Nomutex=
+  - _Mutex=__attribute__ (())
+  - _Nomutex=__attribute__ (())
   - _Resume=throw
   - _Select(expr)=((void)0)
   - _Task=class
