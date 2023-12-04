@@ -37,6 +37,6 @@ Macros:
   - _Select(expr)=((void)0)
   - _Task=class
   - _Throw=throw
-  - _When(condition)=
+  - _When(condition)=__attribute__ (())
   - or=else
   - and=else
