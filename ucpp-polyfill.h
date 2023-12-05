@@ -2,14 +2,11 @@
 
 #include <cstdint>
 
+#include "ucpp-helpers.h"
+
 // Include these first, so that we don't mess up the delivery() functions inside
 #include "uCPP/source/src/library/uActor.h"
 #include "uCPP/source/src/library/uFuture.h"
-
-/// Utilities
-namespace {
-template <typename T> T __convert(...) { throw 0; }
-} // namespace
 
 /// @brief Yields to the scheduler.
 /// @note This is a static member function of `uBaseTask`.
